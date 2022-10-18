@@ -4,6 +4,8 @@ body {
     font-family: 'Epilogue', sans-serif;
     min-height: 100vh;
     color: var(--medium-gray);
+    display: flex;
+    flex-direction: column;
 }
 
 :root {
@@ -51,24 +53,137 @@ ul {
 }
 
 .btn--page{
-    padding: .5rem 1rem;
+    padding: .6rem 1.3rem;
     background-color: var(--almost-black);
     color: var(--almost-white);
 }
 
-footer {
-    display: flex;
-    justify-content: center;
-}
-footer ul {
-    width: 100%;
+.content ul {
     display: flex;
     justify-content: space-between;
     padding: 0;
-    margin: 2rem 1rem;
+    margin: 3rem 1rem;
 }
 
-footer ul li img {
+.content ul li img {
     width: 4rem;
     height: auto;
+}
+
+.nav {
+    display: none;
+}
+
+#img-hero-desktop {
+    display: none;
+}
+@media screen and (min-width:900px) {
+
+
+    #icon-menu {
+        display: none;
+    }
+
+    #img-hero-mobil {
+        display: none;
+    }
+
+    .content-header {
+        display: flex;
+        justify-content: flex-start;
+        margin: 2rem;
+        height: 2rem;
+    }
+
+    #logo-snap {
+        width: 5rem;
+        height: auto;
+    }
+
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .nav__heading {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav__heading ul {
+        display: flex;
+    }
+
+    .nav__heading ul li {
+        margin-right: 2.5rem;
+        cursor: pointer;
+    }
+
+    .nav__heading ul li:hover {
+        color: var(--almost-black);
+    }
+
+    .btn--transp {
+        background-color: transparent;
+        border: 2px solid var(--almost-black);
+        padding: .5rem 1.2rem;
+        color: var(--medium-gray);
+    }
+
+    .btn--disabled {
+        background-color: transparent;
+        border: none;
+        margin-right: 1rem;
+        color: var(--medium-gray);
+    }
+
+    main {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        margin: auto;
+        margin-top: 3rem;
+    }
+
+    .content {
+        text-align: start;
+        width: 50%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .content h1 {
+        font-size: 5rem;
+        margin-bottom: 2.5rem;
+        margin-top: 3rem;
+    }
+
+    .content p {
+        padding-right: 4rem;
+        line-height: 1.6rem;
+    }
+    
+    .btn--page {
+        margin-top: 2rem;
+    }
+    
+    .btn--page:hover {
+        background-color: transparent;
+        color: var(--almost-black);
+    }
+    
+    .content ul {
+        margin: 0;
+        margin-top: 5rem;
+    }
+
+    .banner {
+        width: 40%;
+        background: url(images/image-hero-desktop.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
 }
